@@ -37,13 +37,13 @@ class MessageFieldBox extends StatelessWidget {
             minLines: 1,
             decoration: inputDecoration,
             onFieldSubmitted: (value) {
+              valueTextFormField = value.trim();
               controller.clear();
               focusNode.requestFocus();
               onValue(value);
-              valueTextFormField = value;
             },
             onChanged: (value) {
-              valueTextFormField = value;
+              valueTextFormField = value.trim();
             },
             onTapOutside: (event) {
               focusNode.unfocus();
