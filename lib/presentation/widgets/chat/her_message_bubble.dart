@@ -13,7 +13,7 @@ class HerMessagebubble extends StatelessWidget {
         Container(
           decoration: BoxDecoration(
             color: colors.secondary,
-            borderRadius: BorderRadius.circular(100),
+            borderRadius: BorderRadius.circular(25),
           ),
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           child: const Text(
@@ -36,7 +36,7 @@ class _ImageBubble extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return ClipRRect(
-      borderRadius: BorderRadius.circular(20),
+      borderRadius: BorderRadius.circular(25),
       child: Image.network(
         'https://yesno.wtf/assets/no/14-cb78bf7104f848794808d61b9cd83eba.gif',
         height: size.height * 0.2,
