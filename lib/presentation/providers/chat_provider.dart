@@ -3,12 +3,11 @@ import 'package:flutter/material.dart';
 import '../../domain/entities/message.dart';
 
 class ChatProvider extends ChangeNotifier {
-  final List<Message> _messages = [
-    Message(text: 'Hola Megan', fromWho: FromWho.me),
-    Message(text: 'Como estas ?', fromWho: FromWho.me),
-  ];
+  final List<Message> messagesList = [];
 
   Future<void> sendMessage(String text) async {
-    // TODO: Implementar el envio de mensajes
+    final newMessage = Message(text: text, fromWho: FromWho.me);
+    messagesList.add(newMessage);
+    notifyListeners();
   }
 }
